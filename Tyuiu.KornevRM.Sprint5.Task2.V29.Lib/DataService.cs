@@ -5,7 +5,7 @@ namespace Tyuiu.KornevRM.Sprint5.Task2.V29.Lib
     {
         public string SaveToFileTextData(int[,] matrix)
         {
-            string path = $@"{Directory.GetCurrentDirectory()}\OutPutFileTask2.csv";
+            string path = Path.Combine(Path.GetTempPath(), "OutPutFileTask1.txt");
 
             FileInfo fileInfo = new FileInfo(path);
             bool fileExists = fileInfo.Exists;
