@@ -5,34 +5,18 @@ namespace Tyuiu.KornevRM.Sprint5.Task1.V14.Lib
     {
         public string SaveToFileTextData(int startValue, int stopValue)
         {
-            string path = $@"{Directory.GetCurrentDirectory()}\OutPutFileTask1.txt";
-
-            FileInfo fileInfo = new FileInfo(path);
-            bool fileExists = fileInfo.Exists;
-
-            if (fileExists)
+            string path = Path.Combine(Path.GetTempPath(), "OutPutFileTask1.txt");
+            FileInfo f = new FileInfo(path);
+            if (f.Exists) File.Delete(path);
+            double x;
+            for (int i = startValue; i <= stopValue; i++)
             {
-                File.Delete(path);
+                if (i == 0) x = 0;
+                x = Math.Round((Math.Sin(i) / (i + 1.7)) - Math.Cos(i) * 4 * i - 6, 2);
+                if (i != stopValue) { File.AppendAllText(path, Convert.ToString(x) + '\n'); }
+                else { File.AppendAllText(path, Convert.ToString(x)); }
 
             }
-
-            double y;
-            string strY;
-            for (int x = startValue; x <= stopValue; x++)
-            {
-                y = Math.Round(Math.Sin(x), 2);
-                strY = Convert.ToString(y);
-
-                if (x != stopValue)
-                {
-                    File.AppendAllText(path, strY + Environment.NewLine);
-                }
-                else
-                {
-                    File.AppendAllText(path, strY);
-                }
-            }
-
             return path;
         }
     }
