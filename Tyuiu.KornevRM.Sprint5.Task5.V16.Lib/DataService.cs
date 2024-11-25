@@ -9,7 +9,7 @@ namespace Tyuiu.KornevRM.Sprint5.Task5.V16.Lib
             double res = 0;
             using (StreamReader reader = new StreamReader(path))
             {
-                string line = "";
+                string line;
                 double max = double.MinValue;
                 while ((line = reader.ReadLine()) != null)
                 {
