@@ -8,7 +8,7 @@ namespace Tyuiu.KornevRM.Sprint5.Task6.V10
             DataService ds = new DataService();
             Console.WriteLine("********************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                             *");
-            Console.WriteLine("********************************************************************************");
+            Console.WriteLine("*******************************************************************************");
 
             string path = @"C:\DataSprint5\InPutDataFileTask6V10.txt";
 
