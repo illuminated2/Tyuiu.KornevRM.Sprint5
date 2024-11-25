@@ -1,4 +1,5 @@
-﻿using tyuiu.cources.programming.interfaces.Sprint5;
+﻿using System.Text;
+using tyuiu.cources.programming.interfaces.Sprint5;
 namespace Tyuiu.KornevRM.Sprint5.Task7.V15.Lib
 {
     public class DataService : ISprint5Task7V15
@@ -17,6 +18,8 @@ namespace Tyuiu.KornevRM.Sprint5.Task7.V15.Lib
 
 
             string text = File.ReadAllText(path);
+            byte[] bytes = Encoding.Default.GetBytes(text);
+            text = Encoding.UTF8.GetString(bytes);
             List<string> list = new List<string>();
             foreach (string word in text.Split(" "))
             {
