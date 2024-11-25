@@ -6,17 +6,16 @@ namespace Tyuiu.KornevRM.Sprint5.Task5.V16
         static void Main(string[] args)
         {
             DataService ds = new DataService();
-            Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
-            Console.WriteLine("***************************************************************************");
-            Console.WriteLine("*                                                                         *");
-            string path = $@"{Directory.GetCurrentDirectory()}\InPutDataFileTask5V16.txt";
+
+            string path = @"C:\DataSprint5\InPutDataFileTask5V16.txt";
             Console.WriteLine("Данные находятся в файле: " + path);
+
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
 
             double res = ds.LoadFromDataFile(path);
-            Console.WriteLine(res);
+            Console.WriteLine("Максимальное целое число в файле, которое делится на 10 = " + res);
             Console.ReadKey();
         }
     }

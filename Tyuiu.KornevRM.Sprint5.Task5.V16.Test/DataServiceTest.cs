@@ -7,10 +7,13 @@ namespace Tyuiu.KornevRM.Sprint5.Task5.V16.Test
         [TestMethod]
         public void TestMethod1()
         {
-            string path = Path.Combine(Path.GetTempPath(), "OutPutFileTask5.txt");
+            string path = @"C:\DataSprint5\InPutDataFileTask5V16.txt";
+
             FileInfo fileInfo = new FileInfo(path);
-            bool Exists = fileInfo.Exists;
-            Assert.IsTrue(Exists);
+            bool fileExists = fileInfo.Exists;
+
+            bool wait = true;
+            Assert.AreEqual(wait, fileExists);
         }
     }
 }
