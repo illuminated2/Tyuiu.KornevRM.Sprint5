@@ -18,7 +18,7 @@ namespace Tyuiu.KornevRM.Sprint5.Task7.V15.Lib
 
             string text = File.ReadAllText(path);
             List<string> list = new List<string>();
-            foreach (string word in text.Split(' '))
+            foreach (string word in text.Split(" "))
             {
                 if (word.Length != 2)
                 {
