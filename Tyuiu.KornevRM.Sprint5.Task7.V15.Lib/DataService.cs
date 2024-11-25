@@ -5,7 +5,7 @@ namespace Tyuiu.KornevRM.Sprint5.Task7.V15.Lib
     {
         public string LoadDataAndSave(string path)
         {
-            string pathSaveFile = Path.Combine(Path.GetTempPath(), "OutPutFileTask3.txt"); 
+            string pathSaveFile = Path.Combine(Path.GetTempPath(), "OutPutFileTask7.txt"); 
 
             FileInfo fileinfo = new FileInfo(pathSaveFile);
 
