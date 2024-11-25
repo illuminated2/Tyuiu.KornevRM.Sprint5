@@ -30,7 +30,7 @@ namespace Tyuiu.KornevRM.Sprint5.Task7.V15.Lib
                 }
             }
 
-            File.AppendAllText(pathSaveFile, string.Join(" ", list));
+            File.AppendAllText(pathSaveFile, string.Join("", list));
             return pathSaveFile;
 
 
