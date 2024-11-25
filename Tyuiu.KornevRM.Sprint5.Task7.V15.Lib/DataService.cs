@@ -27,10 +27,7 @@ namespace Tyuiu.KornevRM.Sprint5.Task7.V15.Lib
                 {
                     list.Add(word);
                 }
-                else
-                {
-                    list.Add("");
-                }
+                
             }
 
             File.AppendAllText(pathSaveFile, string.Join(" ", list));
