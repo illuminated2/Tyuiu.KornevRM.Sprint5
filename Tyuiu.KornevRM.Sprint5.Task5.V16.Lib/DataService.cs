@@ -13,7 +13,7 @@ namespace Tyuiu.KornevRM.Sprint5.Task5.V16.Lib
                 double max = double.MinValue;
                 while ((line = reader.ReadLine()) != null)
                 {
-                    if (Convert.ToDouble(line) % 10 == 0 && Convert.ToDouble(line) > max)
+                    if (Convert.ToDouble(line) % 10 == 0)
                     {
                         max = Convert.ToDouble(line);
                     }
