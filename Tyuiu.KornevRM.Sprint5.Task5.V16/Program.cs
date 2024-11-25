@@ -9,7 +9,7 @@ namespace Tyuiu.KornevRM.Sprint5.Task5.V16
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("*                                                                         *");
-            string path = @"C:\DataSprint5\InPutDataFileTask5V16.txt";
+            string path = $@"{Directory.GetCurrentDirectory()}\InPutDataFileTask5V16.txt";
             Console.WriteLine("Данные находятся в файле: " + path);
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");

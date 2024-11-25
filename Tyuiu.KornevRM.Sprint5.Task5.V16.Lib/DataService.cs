@@ -7,7 +7,7 @@ namespace Tyuiu.KornevRM.Sprint5.Task5.V16.Lib
         public double LoadFromDataFile(string path)
         {
             double res = 0;
-            StreamReader reader = new StreamReader(path);
+            using (StreamReader reader = new StreamReader(path))
             {
                 string line;
                 double max = double.MinValue;
