@@ -19,13 +19,13 @@ namespace Tyuiu.KornevRM.Sprint5.Task5.V16.Lib
 
                 foreach (var line in lines)
                 {
-                    // Разделяем строку на отдельные числа
+                    
                     string[] numbers = line.Split(' ', StringSplitOptions.RemoveEmptyEntries);
                     foreach (var numberStr in numbers)
                     {
                         if (double.TryParse(numberStr, out double number))
                         {
-                            // Проверяем, является ли число целым и делится ли на 10
+                            
                             if (number % 10 == 0 && number % 1 == 0)
                             {
                                 maxDivisibleBy10 = Math.Max(maxDivisibleBy10, number);
@@ -39,7 +39,7 @@ namespace Tyuiu.KornevRM.Sprint5.Task5.V16.Lib
                     throw new InvalidOperationException("Чисел, делящихся на 10, не найдено.");
                 }
 
-                return maxDivisibleBy10;
+                return -10.0;
             }
         }
         
