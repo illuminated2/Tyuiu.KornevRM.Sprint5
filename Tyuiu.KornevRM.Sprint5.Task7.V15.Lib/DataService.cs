@@ -7,20 +7,32 @@ namespace Tyuiu.KornevRM.Sprint5.Task7.V15.Lib
         {
             string pathSaveFile = Path.Combine(Path.GetTempPath(), "OutPutFileTask7.txt");
 
+            FileInfo fileinfo = new FileInfo(pathSaveFile);
 
-            if (!File.Exists(pathSaveFile))
+            if (fileinfo.Exists)
             {
-                throw new FileNotFoundException("Файл не найден.", pathSaveFile);
+                File.Delete(pathSaveFile);
             }
 
-       
-            var lines = File.ReadAllLines(pathSaveFile);
-            var resultLines = lines.Select(line =>
-                string.Join(" ", line.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
-                .Where(word => word.Length != 2)));
 
-        
-            return string.Join(Environment.NewLine, resultLines).Trim();
+
+            string text = File.ReadAllText(path);
+            List<string> list = new List<string>();
+            foreach (string word in text.Split(' '))
+            {
+                if (word.Length != 2)
+                {
+                    list.Add(word);
+                }
+                else
+                {
+                    list.Add("");
+                }
+            }
+
+            File.AppendAllText(pathSaveFile, string.Join(" ", list, StringSplitOptions.RemoveEmptyEntries));
+            return pathSaveFile;
+
 
         }
     }
